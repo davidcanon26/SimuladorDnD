@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
-
+import java.util.List;
+import modelo.Aventurero;
 /**
  *
  * @author Usuario
@@ -11,14 +12,42 @@ package Vista;
 public class VistaListaAventureros extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaListaAventureros.class.getName());
-
+    private Controlador.GremioControlador controlador;
     /**
      * Creates new form VistaListaAventureros
      */
     public VistaListaAventureros() {
+        this.controlador = new Controlador.GremioControlador();
         initComponents();
+        setLocationRelativeTo(null);
+        cargarLista();
     }
 
+    public VistaListaAventureros(Controlador.GremioControlador controlador) {
+        this.controlador = controlador;
+        initComponents();
+        setLocationRelativeTo(null);
+        cargarLista();
+    }
+    
+    private void cargarLista() {
+        txtAreaLista.setEditable(false);
+        List<Aventurero> lista = controlador.getAventureros();
+
+        if (lista.isEmpty()) {
+            txtAreaLista.setText("Aún no hay aventureros registrados en el gremio (0/4).");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Aventureros registrados (").append(lista.size()).append("/4):\n\n");
+
+        for (int i = 0; i < lista.size(); i++) {
+            sb.append(i + 1).append(". ").append(lista.get(i).toString()).append("\n");
+        }
+
+        txtAreaLista.setText(sb.toString());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -81,6 +110,10 @@ public class VistaListaAventureros extends javax.swing.JFrame {
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
+        VistaDnD menu = new VistaDnD(controlador);
+        menu.setLocationRelativeTo(null);
+        menu.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
