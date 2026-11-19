@@ -56,6 +56,7 @@ public VistaDnD(Controlador.GremioControlador controlador) {
         btnRegistrar.addActionListener(this::btnRegistrarActionPerformed);
 
         btnVerLista.setText("Ver lista de aventureros");
+        btnVerLista.addActionListener(this::btnVerListaActionPerformed);
 
         btnEmpezarCombate.setText("Empezar combate");
 
@@ -115,11 +116,19 @@ public VistaDnD(Controlador.GremioControlador controlador) {
         
         return;
     }//GEN-LAST:event_btnRegistrarActionPerformed
-    VistaClases ventanaClases = new VistaClases(controlador);
-    ventanaClases.setLocationRelativeTo(null);
-    ventanaClases.setVisible(true);
+        VistaClases ventanaClases = new VistaClases(controlador);
+        ventanaClases.setLocationRelativeTo(null);
+        ventanaClases.setVisible(true);
+        this.dispose();
+        }
+    private void btnVerListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerListaActionPerformed
+        // TODO add your handling code here:
+    VistaListaAventureros ventanaLista = new VistaListaAventureros(controlador);
+    ventanaLista.setLocationRelativeTo(null);
+    ventanaLista.setVisible(true);
     this.dispose();
-    }
+    }//GEN-LAST:event_btnVerListaActionPerformed
+
     /**
      * @param args the command line arguments
      */

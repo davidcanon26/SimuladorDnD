@@ -135,7 +135,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMagoActionPerformed
         // TODO add your handling code here:
-        VistaMago ventana = new VistaMago();
+        VistaMago ventana = new VistaMago(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -143,7 +143,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnClerigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClerigoActionPerformed
         // TODO add your handling code here:
-        VistaClerigo ventana = new VistaClerigo();
+        VistaClerigo ventana = new VistaClerigo(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -151,7 +151,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnMonjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMonjeActionPerformed
         // TODO add your handling code here:
-        VistaMonje ventana = new VistaMonje();
+        VistaMonje ventana = new VistaMonje(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -159,7 +159,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnPaladinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaladinActionPerformed
         // TODO add your handling code here:
-        VistaPaladin ventana = new VistaPaladin();
+        VistaPaladin ventana = new VistaPaladin(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -167,7 +167,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnExploradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExploradorActionPerformed
         // TODO add your handling code here:
-        VistaExplorador ventana = new VistaExplorador();
+        VistaExplorador ventana = new VistaExplorador(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -175,7 +175,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnPicaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPicaroActionPerformed
         // TODO add your handling code here:
-        VistaPicaro ventana = new VistaPicaro();
+        VistaPicaro ventana = new VistaPicaro(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -183,7 +183,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnBardoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBardoActionPerformed
         // TODO add your handling code here:
-        VistaBardo ventana = new VistaBardo();
+        VistaBardo ventana = new VistaBardo(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();

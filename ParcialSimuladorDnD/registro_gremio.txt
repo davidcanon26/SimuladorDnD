@@ -1,3 +1,18 @@
 REGISTRO (1/4): Aventurero [Nombre=david, Nivel=4, PV=12]
 REGISTRO (2/4): Aventurero [Nombre=laas, Nivel=12, PV=12]
 REGISTRO (1/4): Aventurero [Nombre=david, Nivel=2, PV=12]
+REGISTRO (1/4): Guerrero | Nombre: DAVID | Nivel: 12 | PV: 123 | Armadura pesada: Sí
+REGISTRO (1/4): Clérigo | Nombre: samuel | Nivel: 12 | PV: 324 | Dios venerado: Ymir
+REGISTRO (2/4): Guerrero | Nombre: david | Nivel: 12 | PV: 121 | Armadura pesada: Sí
+REGISTRO (1/4): Guerrero | Nombre: david | Nivel: 13 | PV: 129 | Armadura pesada: Sí
+REGISTRO (1/4): Mago | Nombre: samuel | Nivel: 13 | PV: 123 | Espacios de conjuro: 4
+REGISTRO (1/4): Clérigo | Nombre: sam | Nivel: 13 | PV: 121334 | Dios venerado: Ymir
+REGISTRO (2/4): Guerrero | Nombre: david | Nivel: 13 | PV: 1213 | Armadura pesada: No
+REGISTRO (1/4): Monje | Nombre: lasd | Nivel: 12 | PV: 12 | Puntos de Ki: 1
+REGISTRO (1/4): Guerrero | Nombre: as | Nivel: 1 | PV: 1 | Armadura pesada: Sí
+REGISTRO (1/4): Mago | Nombre: asa | Nivel: 1 | PV: 1 | Espacios de conjuro: 1
+REGISTRO (1/4): Clérigo | Nombre: 1 | Nivel: 11 | PV: 1 | Dios venerado: 1
+REGISTRO (1/4): Guerrero | Nombre: 1 | Nivel: 12 | PV: 12 | Armadura pesada: Sí
+REGISTRO (2/4): Mago | Nombre: 1 | Nivel: 11 | PV: 1 | Espacios de conjuro: 1
+REGISTRO (3/4): Clérigo | Nombre: 1 | Nivel: 1 | PV: 1 | Dios venerado: 1
+REGISTRO (4/4): Mago | Nombre: 2 | Nivel: 3 | PV: 3 | Espacios de conjuro: 4
