@@ -26,9 +26,12 @@ public class Picaro extends Aventurero {
     @Override
     public String simularCombate() {
         String accionPrincipal ="Ataque de nivel " + nivel + ":El Pícaro " + nombre + " aprovecha la ventaja táctica para asestar un Ataque Furtivo masivo y se reposiciona.";
-        String accionAtributo = herramientasLadron
-            ? "Además, usa sus herramientas de ladrón para sabotear mecanismos o trampas cercanas durante su maniobra."
-            : "Además, confía únicamente en su sigilo y reflejos para desaparecer de la línea de visión.";
+        String accionAtributo;
+        if (herramientasLadron) {
+        accionAtributo = "Además, usa sus herramientas de ladrón para sabotear mecanismos o trampas cercanas durante su maniobra.";
+        } else {
+        accionAtributo = "Además, confía únicamente en su sigilo y reflejos para desaparecer de la línea de visión.";
+        }
         return accionPrincipal + " " + accionAtributo;
     }
 }
