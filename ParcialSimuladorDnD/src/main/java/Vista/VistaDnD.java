@@ -11,13 +11,21 @@ package Vista;
 public class VistaDnD extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaDnD.class.getName());
-
+    private final Controlador.GremioControlador controlador;
     /**
      * Creates new form VistaDnD
      */
     public VistaDnD() {
-        initComponents();
-    }
+    this.controlador = new Controlador.GremioControlador();
+    initComponents();
+    setLocationRelativeTo(null);
+}
+
+public VistaDnD(Controlador.GremioControlador controlador) {
+    this.controlador = controlador;
+    initComponents();
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -97,12 +105,21 @@ public class VistaDnD extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
-        VistaClases ventanaClases = new VistaClases();
-        ventanaClases.setVisible(true);
-        ventanaClases.setLocationRelativeTo(null);
-        this.setVisible(false);
+        if (!controlador.puedeRegistrarMas()) {
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Ya se alcanzó el límite máximo de " + Controlador.GremioControlador.MAX_AVENTUREROS + " aventureros.",
+            "Gremio completo",
+            javax.swing.JOptionPane.WARNING_MESSAGE
+        );
+        
+        return;
     }//GEN-LAST:event_btnRegistrarActionPerformed
-
+    VistaClases ventanaClases = new VistaClases(controlador);
+    ventanaClases.setLocationRelativeTo(null);
+    ventanaClases.setVisible(true);
+    this.dispose();
+    }
     /**
      * @param args the command line arguments
      */

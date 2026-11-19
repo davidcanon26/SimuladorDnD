@@ -11,13 +11,21 @@ package Vista;
 public class VistaGuerrero extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaGuerrero.class.getName());
-
+    private Controlador.GremioControlador controlador;
     /**
      * Creates new form VistaGuerrero
      */
     public VistaGuerrero() {
-        initComponents();
-    }
+    this.controlador = new Controlador.GremioControlador();
+    initComponents();
+    setLocationRelativeTo(null);
+}
+
+public VistaGuerrero(Controlador.GremioControlador controlador) {
+    this.controlador = controlador;
+    initComponents();
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -102,9 +110,9 @@ public class VistaGuerrero extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbSi))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbSi, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbNo)
                 .addContainerGap(43, Short.MAX_VALUE))

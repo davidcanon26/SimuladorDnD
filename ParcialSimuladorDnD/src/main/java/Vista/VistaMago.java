@@ -11,14 +11,21 @@ package Vista;
 public class VistaMago extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaMago.class.getName());
-
+    private Controlador.GremioControlador controlador;
     /**
      * Creates new form VistaGuerrero
      */
     public VistaMago() {
-        initComponents();
-    }
+    this.controlador = new Controlador.GremioControlador();
+    initComponents();
+    setLocationRelativeTo(null);
+}
 
+public VistaMago(Controlador.GremioControlador controlador) {
+    this.controlador = controlador;
+    initComponents();
+    setLocationRelativeTo(null);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

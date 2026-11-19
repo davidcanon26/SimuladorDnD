@@ -11,13 +11,21 @@ package Vista;
 public class VistaClases extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaClases.class.getName());
-
+private Controlador.GremioControlador controlador;
     /**
      * Creates new form VistaClases
      */
     public VistaClases() {
-        initComponents();
-    }
+    this.controlador = new Controlador.GremioControlador();
+    initComponents();
+    setLocationRelativeTo(null);
+}
+
+public VistaClases(Controlador.GremioControlador controlador) {
+    this.controlador = controlador;
+    initComponents();
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -119,7 +127,7 @@ public class VistaClases extends javax.swing.JFrame {
 
     private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
         // TODO add your handling code here:
-    VistaGuerrero ventana = new VistaGuerrero();
+    VistaGuerrero ventana = new VistaGuerrero(controlador);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
