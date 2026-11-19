@@ -25,10 +25,11 @@ public class Monje extends Aventurero {
 
     @Override
     public String simularCombate() {
-        String accionPrincipal = "El Monje " + nombre + " gasta puntos de Ki para ejecutar una Ráfaga de Golpes y un Ataque Aturdidor.";
-        String accionAtributo = puntosKi > 0
-            ? "Además, concentra su reserva de Ki (" + puntosKi + " pts) para evadir ataques con Paso del Viento."
-            : "Sin embargo, ha agotado su Ki y debe regular su respiración antes de volver a canalizarlo.";
-        return accionPrincipal + " " + accionAtributo;
+        String accionPrincipal = "Ataque de nivel " + nivel + ": El Monje " + nombre
+        + " gasta puntos de Ki para ejecutar una Ráfaga de Golpes y un Ataque Aturdidor.";
+    String accionAtributo = puntosKi > 0
+        ? "Además, concentra su reserva de Ki (" + puntosKi + " pts) para evadir ataques con Paso del Viento."
+        : "Sin embargo, ha agotado su Ki y debe regular su respiración antes de volver a canalizarlo.";
+    return accionPrincipal + " " + accionAtributo;
     }
 }

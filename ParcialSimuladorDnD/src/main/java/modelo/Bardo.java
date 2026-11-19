@@ -25,8 +25,10 @@ public class Bardo extends Aventurero {
 
     @Override
     public String simularCombate() {
-        String accionPrincipal = "El Bardo " + nombre + " toca su instrumento para otorgar Inspiración Bárdica a un aliado.";
-        String accionAtributo = "Además, hace resonar su " + instrumentoMusical + " con una melodía que eleva la moral del equipo en pleno combate.";
-        return accionPrincipal + " " + accionAtributo;
+        String accionPrincipal = "Ataque de nivel " + nivel + ": El Bardo " + nombre
+        + " toca su instrumento para otorgar Inspiración Bárdica a un aliado.";
+    String accionAtributo = "Además, hace resonar su " + instrumentoMusical
+        + " con una melodía que eleva la moral del equipo en pleno combate.";
+    return accionPrincipal + " " + accionAtributo;
     }
 }

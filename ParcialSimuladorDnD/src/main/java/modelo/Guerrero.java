@@ -25,10 +25,11 @@ public class Guerrero extends Aventurero {
 
     @Override
     public String simularCombate() {
-        String accionPrincipal = "El Guerrero " + nombre + " usa Oleada de Acción para realizar múltiples ataques físicos continuos.";
-        String accionAtributo = usaArmaduraPesada
-            ? "Además, su armadura pesada absorbe el impacto frontal y le permite embestir sin perder el equilibrio."
-            : "Además, al no llevar armadura pesada, se mueve con mayor agilidad para encadenar su siguiente golpe.";
-        return accionPrincipal + " " + accionAtributo;
+        String accionPrincipal = "Ataque de nivel " + nivel + ": El Guerrero " + nombre
+        + " usa Oleada de Acción para realizar múltiples ataques físicos continuos.";
+    String accionAtributo = usaArmaduraPesada
+        ? "Además, su armadura pesada absorbe el impacto frontal y le permite embestir sin perder el equilibrio."
+        : "Además, al no llevar armadura pesada, se mueve con mayor agilidad para encadenar su siguiente golpe.";
+    return accionPrincipal + " " + accionAtributo;
     }
 }

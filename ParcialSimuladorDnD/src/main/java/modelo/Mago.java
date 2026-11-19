@@ -25,10 +25,11 @@ public class Mago extends Aventurero {
 
     @Override
     public String simularCombate() {
-        String accionPrincipal = "El Mago " + nombre + " gasta un espacio de conjuro para lanzar una poderosa Bola de Fuego.";
-        String accionAtributo = espaciosConjuro > 0
-            ? "Además, canaliza sus espacios de conjuro restantes (" + espaciosConjuro + ") para sostener un escudo arcano defensivo."
-            : "Sin embargo, al no tener espacios de conjuro disponibles, solo puede recurrir a trucos menores de emergencia.";
-        return accionPrincipal + " " + accionAtributo;
+        String accionPrincipal = "Ataque de nivel " + nivel + ": El Mago " + nombre
+        + " gasta un espacio de conjuro para lanzar una poderosa Bola de Fuego.";
+    String accionAtributo = espaciosConjuro > 0
+        ? "Además, canaliza sus espacios de conjuro restantes (" + espaciosConjuro + ") para sostener un escudo arcano defensivo."
+        : "Sin embargo, al no tener espacios de conjuro disponibles, solo puede recurrir a trucos menores de emergencia.";
+    return accionPrincipal + " " + accionAtributo;
     }
 }

@@ -15,7 +15,7 @@ public class AventureroMulticlase extends Aventurero {
     }
 
     public int tirarD20() {
-        return RANDOM.nextInt(20) + 1; // 1 a 20
+        return RANDOM.nextInt(20) + 1; 
     }
 
     public String simularCombateConD20(int d20) {
@@ -41,16 +41,21 @@ public class AventureroMulticlase extends Aventurero {
         }
 
         for (ClaseNivel cn : clases) {
-            sb.append("  • [").append(cn.toString()).append("] ");
+            Aventurero instanciaClase = cn.getClase();
+            int nivelDeClase = cn.getNivelesAsignados();
+
+            sb.append("  • [Ataque de nivel ").append(nivelDeClase)
+              .append(" - ").append(instanciaClase.getClass().getSimpleName()).append("] ");
+
             if (d20 == 1) {
-                sb.append("¡Fallo crítico! ").append(nombre)
-                  .append(" tropieza o falla su maniobra con ").append(cn.getClase().getClass().getSimpleName())
-                  .append(" y el ataque no conecta.");
+                sb.append("¡Fallo crítico! El ataque de nivel ").append(nivelDeClase)
+                  .append(" de ").append(nombre).append(" falla y no surte efecto.");
             } else if (d20 == 20) {
-                sb.append("¡GOLPE CRÍTICO! ").append(cn.getClase().simularCombate())
-                  .append(" (¡Potencia y daño crítico maximizados!)");
+                sb.append("¡GOLPE CRÍTICO (Ataque de nivel ").append(nivelDeClase).append(")! ")
+                  .append(instanciaClase.simularCombate())
+                  .append(" (¡Daño crítico maximizado!)");
             } else {
-                sb.append(cn.getClase().simularCombate());
+                sb.append(instanciaClase.simularCombate());
             }
             sb.append("\n");
         }
