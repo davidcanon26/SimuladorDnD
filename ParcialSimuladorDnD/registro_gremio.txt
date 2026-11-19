@@ -39,3 +39,14 @@ CLASE ASIGNADA -> Nombre: sebas | Nivel total: 1 (Repartidos: 1/1) | PV: 123 | C
 REGISTRO (4/4): Nombre: tomas | Nivel total: 14 (Repartidos: 0/14) | PV: 1 | Clases (0/4): Ninguna
 CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 10/14) | PV: 1 | Clases (1/4): Explorador (Nv. 10)
 CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 14/14) | PV: 1 | Clases (2/4): Explorador (Nv. 10), Bardo (Nv. 4)
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 150 | Clases (0/4): Ninguna
+REGISTRO (2/4): Nombre: samuel | Nivel total: 19 (Repartidos: 0/19) | PV: 10000000 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 150 | Clases (1/4): Guerrero (Nv. 20)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 19 (Repartidos: 19/19) | PV: 10000000 | Clases (1/4): Bardo (Nv. 19)
+REGISTRO (3/4): Nombre: velasquez | Nivel total: 13 (Repartidos: 0/13) | PV: 12 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: velasquez | Nivel total: 13 (Repartidos: 10/13) | PV: 12 | Clases (1/4): Clerigo (Nv. 10)
+CLASE ASIGNADA -> Nombre: velasquez | Nivel total: 13 (Repartidos: 13/13) | PV: 12 | Clases (2/4): Clerigo (Nv. 10), Picaro (Nv. 3)
+REGISTRO (4/4): Nombre: edwin | Nivel total: 1 (Repartidos: 0/1) | PV: 1 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: edwin | Nivel total: 1 (Repartidos: 1/1) | PV: 1 | Clases (1/4): Paladin (Nv. 1)
+REGISTRO (1/4): Nombre: profe | Nivel total: 20 (Repartidos: 0/20) | PV: 12000 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: profe | Nivel total: 20 (Repartidos: 20/20) | PV: 12000 | Clases (1/4): Guerrero (Nv. 20)
