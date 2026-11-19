@@ -31,32 +31,23 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="btnGuerrero" max="32767" attributes="0"/>
-                              <Component id="btnMonje" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="btnPicaro" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="btnGuerrero" max="32767" attributes="0"/>
+                          <Component id="btnPicaro" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnMonje" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="btnBardo" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnPaladin" max="32767" attributes="0"/>
-                                  <Component id="btnMago" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="48" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnExplorador" max="32767" attributes="0"/>
-                                  <Component id="btnClerigo" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnPaladin" max="32767" attributes="0"/>
+                          <Component id="btnBardo" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnMago" alignment="1" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnExplorador" max="32767" attributes="0"/>
+                          <Component id="btnClerigo" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -99,41 +90,65 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Guerrero"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuerreroActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnMago">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mago"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMagoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnClerigo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Clerigo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClerigoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnMonje">
       <Properties>
         <Property name="text" type="java.lang.String" value="Monje"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMonjeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPaladin">
       <Properties>
         <Property name="text" type="java.lang.String" value="Paladin"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPaladinActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExplorador">
       <Properties>
         <Property name="text" type="java.lang.String" value="Explorador"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExploradorActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPicaro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Picaro"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPicaroActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnBardo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bardo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBardoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

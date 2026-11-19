@@ -43,20 +43,28 @@ public class VistaClases extends javax.swing.JFrame {
         jLabel1.setText("Selecciona una clase para empezar ");
 
         btnGuerrero.setText("Guerrero");
+        btnGuerrero.addActionListener(this::btnGuerreroActionPerformed);
 
         btnMago.setText("Mago");
+        btnMago.addActionListener(this::btnMagoActionPerformed);
 
         btnClerigo.setText("Clerigo");
+        btnClerigo.addActionListener(this::btnClerigoActionPerformed);
 
         btnMonje.setText("Monje");
+        btnMonje.addActionListener(this::btnMonjeActionPerformed);
 
         btnPaladin.setText("Paladin");
+        btnPaladin.addActionListener(this::btnPaladinActionPerformed);
 
         btnExplorador.setText("Explorador");
+        btnExplorador.addActionListener(this::btnExploradorActionPerformed);
 
         btnPicaro.setText("Picaro");
+        btnPicaro.addActionListener(this::btnPicaroActionPerformed);
 
         btnBardo.setText("Bardo");
+        btnBardo.addActionListener(this::btnBardoActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,27 +75,22 @@ public class VistaClases extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(btnGuerrero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnMonje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(btnPicaro))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnGuerrero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnPicaro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMonje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnBardo)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnPaladin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnMago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnExplorador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnClerigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(40, 40, 40))))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPaladin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnBardo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMago, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnExplorador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnClerigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(40, 40, 40))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,6 +116,70 @@ public class VistaClases extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
+        // TODO add your handling code here:
+    VistaGuerrero ventana = new VistaGuerrero();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnGuerreroActionPerformed
+
+    private void btnMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMagoActionPerformed
+        // TODO add your handling code here:
+        VistaMago ventana = new VistaMago();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnMagoActionPerformed
+
+    private void btnClerigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClerigoActionPerformed
+        // TODO add your handling code here:
+        VistaClerigo ventana = new VistaClerigo();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnClerigoActionPerformed
+
+    private void btnMonjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMonjeActionPerformed
+        // TODO add your handling code here:
+        VistaMonje ventana = new VistaMonje();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnMonjeActionPerformed
+
+    private void btnPaladinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaladinActionPerformed
+        // TODO add your handling code here:
+        VistaPaladin ventana = new VistaPaladin();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnPaladinActionPerformed
+
+    private void btnExploradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExploradorActionPerformed
+        // TODO add your handling code here:
+        VistaExplorador ventana = new VistaExplorador();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnExploradorActionPerformed
+
+    private void btnPicaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPicaroActionPerformed
+        // TODO add your handling code here:
+        VistaPicaro ventana = new VistaPicaro();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnPicaroActionPerformed
+
+    private void btnBardoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBardoActionPerformed
+        // TODO add your handling code here:
+        VistaBardo ventana = new VistaBardo();
+    ventana.setLocationRelativeTo(null);
+    ventana.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnBardoActionPerformed
 
     /**
      * @param args the command line arguments

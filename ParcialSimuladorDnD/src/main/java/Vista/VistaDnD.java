@@ -97,6 +97,10 @@ public class VistaDnD extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
+        VistaClases ventanaClases = new VistaClases();
+        ventanaClases.setVisible(true);
+        ventanaClases.setLocationRelativeTo(null);
+        this.setVisible(false);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     /**

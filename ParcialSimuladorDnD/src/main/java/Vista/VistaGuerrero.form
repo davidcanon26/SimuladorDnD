@@ -35,14 +35,15 @@
                       <Component id="jLabel1" max="32767" attributes="0"/>
                       <Component id="txtNombre" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="txtNivel" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtVida" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNivel" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnHecho" min="-2" max="-2" attributes="0"/>
                           <Component id="rbSi" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <Component id="rbNo" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -62,8 +63,11 @@
               <Component id="txtNombre" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtNivel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtNivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnHecho" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -76,7 +80,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="rbNo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -125,6 +129,11 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xbf;Usa armadura pesada?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnHecho">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hecho"/>
       </Properties>
     </Component>
   </SubComponents>
