@@ -1,0 +1,3 @@
+REGISTRO (1/4): Aventurero [Nombre=david, Nivel=4, PV=12]
+REGISTRO (2/4): Aventurero [Nombre=laas, Nivel=12, PV=12]
+REGISTRO (1/4): Aventurero [Nombre=david, Nivel=2, PV=12]

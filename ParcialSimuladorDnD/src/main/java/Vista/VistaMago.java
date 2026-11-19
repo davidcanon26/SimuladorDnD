@@ -59,6 +59,7 @@ public VistaMago(Controlador.GremioControlador controlador) {
         jLabel4.setText("Ingresa cantidad de espacios de conjuro");
 
         btnHecho.setText("Hecho");
+        btnHecho.addActionListener(this::btnHechoActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +112,50 @@ public VistaMago(Controlador.GremioControlador controlador) {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnHechoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHechoActionPerformed
+        // TODO add your handling code here:
+        if (!controlador.puedeRegistrarMas()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Ya alcanzaste el máximo de 4 aventureros.");
+        return;
+    }
+
+    String nombre = txtNombre.getText().trim();
+    if (nombre.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Ingresa un nombre.");
+        return;
+    }
+
+    try {
+        int nivel = Integer.parseInt(txtNivel.getText().trim());
+        int vida = Integer.parseInt(txtVida.getText().trim());
+        int espaciosConjuro = Integer.parseInt(txtEspaciosConjuro.getText().trim());
+
+        if (nivel < 1 || nivel > 20) {
+            javax.swing.JOptionPane.showMessageDialog(this, "El nivel debe estar entre 1 y 20.");
+            return;
+        }
+        if (vida <= 0 || espaciosConjuro < 0) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Revisa que vida (> 0) y espacios de conjuro (>= 0) sean válidos.");
+            return;
+        }
+
+        modelo.Mago mago = new modelo.Mago(nombre, nivel, vida, espaciosConjuro);
+
+        if (controlador.registrarAventurero(mago)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Mago registrado (" + controlador.getCantidadAventureros() + "/4)."
+            );
+            VistaDnD menu = new VistaDnD(controlador);
+            menu.setLocationRelativeTo(null);
+            menu.setVisible(true);
+            this.dispose();
+        }
+    } catch (NumberFormatException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Nivel, vida y espacios de conjuro deben ser números enteros.");
+    }
+    }//GEN-LAST:event_btnHechoActionPerformed
 
     /**
      * @param args the command line arguments
