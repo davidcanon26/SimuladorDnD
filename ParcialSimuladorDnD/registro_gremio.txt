@@ -1,0 +1,52 @@
+REGISTRO (1/4): Aventurero [Nombre=david, Nivel=4, PV=12]
+REGISTRO (2/4): Aventurero [Nombre=laas, Nivel=12, PV=12]
+REGISTRO (1/4): Aventurero [Nombre=david, Nivel=2, PV=12]
+REGISTRO (1/4): Guerrero | Nombre: DAVID | Nivel: 12 | PV: 123 | Armadura pesada: Sí
+REGISTRO (1/4): Clérigo | Nombre: samuel | Nivel: 12 | PV: 324 | Dios venerado: Ymir
+REGISTRO (2/4): Guerrero | Nombre: david | Nivel: 12 | PV: 121 | Armadura pesada: Sí
+REGISTRO (1/4): Guerrero | Nombre: david | Nivel: 13 | PV: 129 | Armadura pesada: Sí
+REGISTRO (1/4): Mago | Nombre: samuel | Nivel: 13 | PV: 123 | Espacios de conjuro: 4
+REGISTRO (1/4): Clérigo | Nombre: sam | Nivel: 13 | PV: 121334 | Dios venerado: Ymir
+REGISTRO (2/4): Guerrero | Nombre: david | Nivel: 13 | PV: 1213 | Armadura pesada: No
+REGISTRO (1/4): Monje | Nombre: lasd | Nivel: 12 | PV: 12 | Puntos de Ki: 1
+REGISTRO (1/4): Guerrero | Nombre: as | Nivel: 1 | PV: 1 | Armadura pesada: Sí
+REGISTRO (1/4): Mago | Nombre: asa | Nivel: 1 | PV: 1 | Espacios de conjuro: 1
+REGISTRO (1/4): Clérigo | Nombre: 1 | Nivel: 11 | PV: 1 | Dios venerado: 1
+REGISTRO (1/4): Guerrero | Nombre: 1 | Nivel: 12 | PV: 12 | Armadura pesada: Sí
+REGISTRO (2/4): Mago | Nombre: 1 | Nivel: 11 | PV: 1 | Espacios de conjuro: 1
+REGISTRO (3/4): Clérigo | Nombre: 1 | Nivel: 1 | PV: 1 | Dios venerado: 1
+REGISTRO (4/4): Mago | Nombre: 2 | Nivel: 3 | PV: 3 | Espacios de conjuro: 4
+REGISTRO (1/4): Nombre: david | Nivel total: 14 (Repartidos: 0/14) | PV: 123 | Clases (0/4): Ninguna
+REGISTRO (2/4): Nombre: samuel | Nivel total: 20 (Repartidos: 0/20) | PV: 12355 | Clases (0/4): Ninguna
+REGISTRO (3/4): Nombre: velasqeuz | Nivel total: 20 (Repartidos: 0/20) | PV: 1233 | Clases (0/4): Ninguna
+REGISTRO (4/4): Nombre: pepe | Nivel total: 20 (Repartidos: 0/20) | PV: 123 | Clases (0/4): Ninguna
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 124 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 13/20) | PV: 124 | Clases (1/4): Guerrero (Nv. 13)
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 124 | Clases (2/4): Guerrero (Nv. 13), Clerigo (Nv. 7)
+REGISTRO (2/4): Nombre: samuel | Nivel total: 13 (Repartidos: 0/13) | PV: 150 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 1/13) | PV: 150 | Clases (1/4): Monje (Nv. 1)
+REGISTRO (1/4): Nombre: david | Nivel total: 1 (Repartidos: 0/1) | PV: 123 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 1 (Repartidos: 1/1) | PV: 123 | Clases (1/4): Guerrero (Nv. 1)
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 150 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 16/20) | PV: 150 | Clases (1/4): Guerrero (Nv. 16)
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 150 | Clases (2/4): Guerrero (Nv. 16), Mago (Nv. 4)
+REGISTRO (2/4): Nombre: samuel | Nivel total: 13 (Repartidos: 0/13) | PV: 309 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 6/13) | PV: 309 | Clases (1/4): Paladin (Nv. 6)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 9/13) | PV: 309 | Clases (2/4): Paladin (Nv. 6), Explorador (Nv. 3)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 13/13) | PV: 309 | Clases (3/4): Paladin (Nv. 6), Explorador (Nv. 3), Clerigo (Nv. 4)
+REGISTRO (3/4): Nombre: sebas | Nivel total: 1 (Repartidos: 0/1) | PV: 123 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: sebas | Nivel total: 1 (Repartidos: 1/1) | PV: 123 | Clases (1/4): Picaro (Nv. 1)
+REGISTRO (4/4): Nombre: tomas | Nivel total: 14 (Repartidos: 0/14) | PV: 1 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 10/14) | PV: 1 | Clases (1/4): Explorador (Nv. 10)
+CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 14/14) | PV: 1 | Clases (2/4): Explorador (Nv. 10), Bardo (Nv. 4)
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 150 | Clases (0/4): Ninguna
+REGISTRO (2/4): Nombre: samuel | Nivel total: 19 (Repartidos: 0/19) | PV: 10000000 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 150 | Clases (1/4): Guerrero (Nv. 20)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 19 (Repartidos: 19/19) | PV: 10000000 | Clases (1/4): Bardo (Nv. 19)
+REGISTRO (3/4): Nombre: velasquez | Nivel total: 13 (Repartidos: 0/13) | PV: 12 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: velasquez | Nivel total: 13 (Repartidos: 10/13) | PV: 12 | Clases (1/4): Clerigo (Nv. 10)
+CLASE ASIGNADA -> Nombre: velasquez | Nivel total: 13 (Repartidos: 13/13) | PV: 12 | Clases (2/4): Clerigo (Nv. 10), Picaro (Nv. 3)
+REGISTRO (4/4): Nombre: edwin | Nivel total: 1 (Repartidos: 0/1) | PV: 1 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: edwin | Nivel total: 1 (Repartidos: 1/1) | PV: 1 | Clases (1/4): Paladin (Nv. 1)
+REGISTRO (1/4): Nombre: profe | Nivel total: 20 (Repartidos: 0/20) | PV: 12000 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: profe | Nivel total: 20 (Repartidos: 20/20) | PV: 12000 | Clases (1/4): Guerrero (Nv. 20)
