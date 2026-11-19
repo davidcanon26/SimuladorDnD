@@ -60,6 +60,7 @@ public VistaDnD(Controlador.GremioControlador controlador) {
         btnVerLista.addActionListener(this::btnVerListaActionPerformed);
 
         btnEmpezarCombate.setText("Empezar combate");
+        btnEmpezarCombate.addActionListener(this::btnEmpezarCombateActionPerformed);
 
         btnElegirClase.setText("Elegir clase");
         btnElegirClase.addActionListener(this::btnElegirClaseActionPerformed);
@@ -183,6 +184,22 @@ public VistaDnD(Controlador.GremioControlador controlador) {
     ventanaClases.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_btnElegirClaseActionPerformed
+
+    private void btnEmpezarCombateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpezarCombateActionPerformed
+        // TODO add your handling code here:
+        if (controlador == null || controlador.getAventureros().isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Primero registra al menos un aventurero antes de iniciar el combate."
+        );
+        return;
+    }
+
+    VistaComenzarCombate vistaCombate = new VistaComenzarCombate(controlador);
+    vistaCombate.setLocationRelativeTo(null);
+    vistaCombate.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnEmpezarCombateActionPerformed
 
     /**
      * @param args the command line arguments

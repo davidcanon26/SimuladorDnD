@@ -27,3 +27,15 @@ REGISTRO (2/4): Nombre: samuel | Nivel total: 13 (Repartidos: 0/13) | PV: 150 | 
 CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 1/13) | PV: 150 | Clases (1/4): Monje (Nv. 1)
 REGISTRO (1/4): Nombre: david | Nivel total: 1 (Repartidos: 0/1) | PV: 123 | Clases (0/4): Ninguna
 CLASE ASIGNADA -> Nombre: david | Nivel total: 1 (Repartidos: 1/1) | PV: 123 | Clases (1/4): Guerrero (Nv. 1)
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 150 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 16/20) | PV: 150 | Clases (1/4): Guerrero (Nv. 16)
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 150 | Clases (2/4): Guerrero (Nv. 16), Mago (Nv. 4)
+REGISTRO (2/4): Nombre: samuel | Nivel total: 13 (Repartidos: 0/13) | PV: 309 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 6/13) | PV: 309 | Clases (1/4): Paladin (Nv. 6)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 9/13) | PV: 309 | Clases (2/4): Paladin (Nv. 6), Explorador (Nv. 3)
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 13/13) | PV: 309 | Clases (3/4): Paladin (Nv. 6), Explorador (Nv. 3), Clerigo (Nv. 4)
+REGISTRO (3/4): Nombre: sebas | Nivel total: 1 (Repartidos: 0/1) | PV: 123 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: sebas | Nivel total: 1 (Repartidos: 1/1) | PV: 123 | Clases (1/4): Picaro (Nv. 1)
+REGISTRO (4/4): Nombre: tomas | Nivel total: 14 (Repartidos: 0/14) | PV: 1 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 10/14) | PV: 1 | Clases (1/4): Explorador (Nv. 10)
+CLASE ASIGNADA -> Nombre: tomas | Nivel total: 14 (Repartidos: 14/14) | PV: 1 | Clases (2/4): Explorador (Nv. 10), Bardo (Nv. 4)
