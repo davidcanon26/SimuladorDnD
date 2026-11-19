@@ -25,13 +25,8 @@ public class Paladin extends Aventurero {
 
     @Override
     public String simularCombate() {
-        return "El Paladín " + nombre + " consume magia para imbuir su arma con un Castigo Divino de daño radiante.";
+        String accionPrincipal = "El Paladín " + nombre + " consume magia para imbuir su arma con un Castigo Divino de daño radiante.";
+        String accionAtributo = "Además, aprovecha sus " + puntosFuerza + " puntos de fuerza para asestar un empuje contundente que derriba al rival.";
+        return accionPrincipal + " " + accionAtributo;
     }
-    @Override
-    public String toString() {
-        return "Paladín | Nombre: " + nombre +
-           " | Nivel: " + nivel +
-           " | PV: " + puntosVida +
-           " | Puntos de fuerza: " + puntosFuerza;
-}
 }

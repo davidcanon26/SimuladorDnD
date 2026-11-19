@@ -25,13 +25,8 @@ public class Explorador extends Aventurero {
 
     @Override
     public String simularCombate() {
-        return "El Explorador " + nombre + " aplica Marca del Cazador sobre el objetivo para maximizar su daño sostenido.";
+        String accionPrincipal = "El Explorador " + nombre + " aplica Marca del Cazador sobre el objetivo para maximizar su daño sostenido.";
+        String accionAtributo = "Además, domina el entorno de " + terrenoFavorecido + " para rastrear al enemigo y colocarse en posición ventajosa.";
+        return accionPrincipal + " " + accionAtributo;
     }
-    @Override
-    public String toString() {
-        return "Explorador | Nombre: " + nombre +
-           " | Nivel: " + nivel +
-           " | PV: " + puntosVida +
-           " | Terreno favorecido: " + terrenoFavorecido;
-}
 }

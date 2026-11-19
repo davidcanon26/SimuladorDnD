@@ -25,13 +25,8 @@ public class Clerigo extends Aventurero {
 
     @Override
     public String simularCombate() {
-        return "El Clérigo " + nombre + " usa Canalizar Divinidad para curar a sus aliados y expulsar muertos vivientes.";
+        String accionPrincipal = "El Clérigo " + nombre + " usa Canalizar Divinidad para curar a sus aliados y expulsar muertos vivientes.";
+        String accionAtributo = "Además, invoca la bendición de " + diosVenerado + " para reforzar la fe del grupo y purificar el campo de batalla.";
+        return accionPrincipal + " " + accionAtributo;
     }
-    @Override
-    public String toString() {
-        return "Clérigo | Nombre: " + nombre +
-           " | Nivel: " + nivel +
-           " | PV: " + puntosVida +
-           " | Dios venerado: " + diosVenerado;
-}
 }
