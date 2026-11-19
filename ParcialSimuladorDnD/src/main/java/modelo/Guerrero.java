@@ -27,4 +27,11 @@ public class Guerrero extends Aventurero {
     public String simularCombate() {
         return "El Guerrero " + nombre + " usa Oleada de Acción para realizar múltiples ataques físicos continuos.";
     }
+    @Override
+    public String toString() {
+        return "Guerrero | Nombre: " + nombre +
+           " | Nivel: " + nivel +
+           " | PV: " + puntosVida +
+           " | Armadura pesada: " + (usaArmaduraPesada ? "Sí" : "No");
+}
 }

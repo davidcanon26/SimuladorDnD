@@ -27,4 +27,11 @@ public class Bardo extends Aventurero {
     public String simularCombate() {
         return "El Bardo " + nombre + " toca su instrumento para otorgar Inspiración Bárdica a un aliado.";
     }
+    @Override
+    public String toString() {
+        return "Bardo | Nombre: " + nombre +
+           " | Nivel: " + nivel +
+           " | PV: " + puntosVida +
+           " | Instrumento musical: " + instrumentoMusical;
+}
 }

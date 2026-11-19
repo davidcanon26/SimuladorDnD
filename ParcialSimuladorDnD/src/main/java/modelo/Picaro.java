@@ -27,4 +27,11 @@ public class Picaro extends Aventurero {
     public String simularCombate() {
         return "El Pícaro " + nombre + " aprovecha la ventaja táctica para asestar un Ataque Furtivo masivo y se reposiciona.";
     }
+    @Override
+    public String toString() {
+        return "Pícaro | Nombre: " + nombre +
+           " | Nivel: " + nivel +
+           " | PV: " + puntosVida +
+           " | Herramientas de ladrón: " + (herramientasLadron ? "Sí" : "No");
+}
 }

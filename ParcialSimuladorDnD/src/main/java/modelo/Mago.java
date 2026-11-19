@@ -27,4 +27,11 @@ public class Mago extends Aventurero {
     public String simularCombate() {
         return "El Mago " + nombre + " gasta un espacio de conjuro para lanzar una poderosa Bola de Fuego.";
     }
+    @Override
+    public String toString() {
+        return "Mago | Nombre: " + nombre +
+           " | Nivel: " + nivel +
+           " | PV: " + puntosVida +
+           " | Espacios de conjuro: " + espaciosConjuro;
+}
 }
