@@ -42,6 +42,7 @@ public VistaDnD(Controlador.GremioControlador controlador) {
         btnRegistrar = new javax.swing.JButton();
         btnVerLista = new javax.swing.JButton();
         btnEmpezarCombate = new javax.swing.JButton();
+        btnElegirClase = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,6 +61,9 @@ public VistaDnD(Controlador.GremioControlador controlador) {
 
         btnEmpezarCombate.setText("Empezar combate");
 
+        btnElegirClase.setText("Elegir clase");
+        btnElegirClase.addActionListener(this::btnElegirClaseActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -73,14 +77,15 @@ public VistaDnD(Controlador.GremioControlador controlador) {
                         .addGap(154, 154, 154)
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnVerLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnEmpezarCombate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(182, 182, 182)
-                        .addComponent(jLabel1)))
+                            .addComponent(btnEmpezarCombate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnElegirClase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,13 +97,15 @@ public VistaDnD(Controlador.GremioControlador controlador) {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addComponent(btnRegistrar)
+                .addGap(18, 18, 18)
+                .addComponent(btnElegirClase)
                 .addGap(18, 18, 18)
                 .addComponent(btnVerLista)
                 .addGap(18, 18, 18)
                 .addComponent(btnEmpezarCombate)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -116,9 +123,9 @@ public VistaDnD(Controlador.GremioControlador controlador) {
         
         return;
     }//GEN-LAST:event_btnRegistrarActionPerformed
-        VistaClases ventanaClases = new VistaClases(controlador);
-        ventanaClases.setLocationRelativeTo(null);
-        ventanaClases.setVisible(true);
+        VistaCrearAventurero ventana = new VistaCrearAventurero(controlador);
+        ventana.setLocationRelativeTo(null);
+        ventana.setVisible(true);
         this.dispose();
         }
     private void btnVerListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerListaActionPerformed
@@ -128,6 +135,51 @@ public VistaDnD(Controlador.GremioControlador controlador) {
     ventanaLista.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_btnVerListaActionPerformed
+
+    private void btnElegirClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElegirClaseActionPerformed
+        // TODO add your handling code here:
+        if (controlador.getAventureros().isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Primero debes crear un aventurero.");
+        return;
+    }
+
+    String nombreBuscado = javax.swing.JOptionPane.showInputDialog(
+        this,
+        "Ingresa el nombre del aventurero al que le asignarás una clase:"
+    );
+
+    if (nombreBuscado == null || nombreBuscado.trim().isEmpty()) {
+        return;
+    }
+
+    modelo.Aventurero aventurero = controlador.buscarAventureroPorNombre(nombreBuscado);
+
+    if (aventurero == null) {
+        javax.swing.JOptionPane.showMessageDialog(this, "No existe un aventurero con el nombre '" + nombreBuscado + "'.");
+        return;
+    }
+
+    if (aventurero.getCantidadClases() >= modelo.Aventurero.MAX_CLASES) {
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            aventurero.getNombre() + " ya alcanzó el máximo de 4 clases (" + aventurero.getCantidadClases() + "/4)."
+        );
+        return;
+    }
+
+    if (aventurero.getNivelesRestantes() <= 0) {
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            aventurero.getNombre() + " ya repartió todos sus " + aventurero.getNivel() + " niveles."
+        );
+        return;
+    }
+
+    VistaClases ventanaClases = new VistaClases(controlador, aventurero);
+    ventanaClases.setLocationRelativeTo(null);
+    ventanaClases.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnElegirClaseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,6 +207,7 @@ public VistaDnD(Controlador.GremioControlador controlador) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnElegirClase;
     private javax.swing.JButton btnEmpezarCombate;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnVerLista;

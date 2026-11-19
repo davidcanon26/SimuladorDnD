@@ -16,3 +16,12 @@ REGISTRO (1/4): Guerrero | Nombre: 1 | Nivel: 12 | PV: 12 | Armadura pesada: Sí
 REGISTRO (2/4): Mago | Nombre: 1 | Nivel: 11 | PV: 1 | Espacios de conjuro: 1
 REGISTRO (3/4): Clérigo | Nombre: 1 | Nivel: 1 | PV: 1 | Dios venerado: 1
 REGISTRO (4/4): Mago | Nombre: 2 | Nivel: 3 | PV: 3 | Espacios de conjuro: 4
+REGISTRO (1/4): Nombre: david | Nivel total: 14 (Repartidos: 0/14) | PV: 123 | Clases (0/4): Ninguna
+REGISTRO (2/4): Nombre: samuel | Nivel total: 20 (Repartidos: 0/20) | PV: 12355 | Clases (0/4): Ninguna
+REGISTRO (3/4): Nombre: velasqeuz | Nivel total: 20 (Repartidos: 0/20) | PV: 1233 | Clases (0/4): Ninguna
+REGISTRO (4/4): Nombre: pepe | Nivel total: 20 (Repartidos: 0/20) | PV: 123 | Clases (0/4): Ninguna
+REGISTRO (1/4): Nombre: david | Nivel total: 20 (Repartidos: 0/20) | PV: 124 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 13/20) | PV: 124 | Clases (1/4): Guerrero (Nv. 13)
+CLASE ASIGNADA -> Nombre: david | Nivel total: 20 (Repartidos: 20/20) | PV: 124 | Clases (2/4): Guerrero (Nv. 13), Clerigo (Nv. 7)
+REGISTRO (2/4): Nombre: samuel | Nivel total: 13 (Repartidos: 0/13) | PV: 150 | Clases (0/4): Ninguna
+CLASE ASIGNADA -> Nombre: samuel | Nivel total: 13 (Repartidos: 1/13) | PV: 150 | Clases (1/4): Monje (Nv. 1)

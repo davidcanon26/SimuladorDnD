@@ -60,4 +60,22 @@ public class GremioControlador {
             System.err.println("Error al escribir en " + ARCHIVO_REGISTRO + ": " + e.getMessage());
         }
     }
+    public Aventurero buscarAventureroPorNombre(String nombre) {
+    if (nombre == null) return null;
+    for (Aventurero a : aventureros) {
+        if (a.getNombre().equalsIgnoreCase(nombre.trim())) {
+            return a;
+        }
+    }
+    return null;
+}
+
+public boolean asignarClaseAAventurero(Aventurero aventurero, Aventurero instanciaClase, int nivelesEnClase) {
+    if (aventurero == null) return false;
+    boolean agregado = aventurero.agregarClase(instanciaClase, nivelesEnClase);
+    if (agregado) {
+        guardarEnArchivo("CLASE ASIGNADA -> " + aventurero.toString());
+    }
+    return agregado;
+}
 }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
-
+import modelo.Aventurero;
 /**
  *
  * @author Usuario
@@ -11,22 +11,41 @@ package Vista;
 public class VistaClases extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaClases.class.getName());
-private Controlador.GremioControlador controlador;
+    private Controlador.GremioControlador controlador;
+    private Aventurero aventurero;
     /**
      * Creates new form VistaClases
      */
     public VistaClases() {
-    this.controlador = new Controlador.GremioControlador();
-    initComponents();
-    setLocationRelativeTo(null);
-}
+        this.controlador = new Controlador.GremioControlador();
+        initComponents();
+        setLocationRelativeTo(null);
+        actualizarEncabezado();
+    }
 
-public VistaClases(Controlador.GremioControlador controlador) {
-    this.controlador = controlador;
-    initComponents();
-    setLocationRelativeTo(null);
-}
+    public VistaClases(Controlador.GremioControlador controlador) {
+        this.controlador = controlador;
+        initComponents();
+        setLocationRelativeTo(null);
+        actualizarEncabezado();
+    }
 
+    public VistaClases(Controlador.GremioControlador controlador, Aventurero aventurero) {
+        this.controlador = controlador;
+        this.aventurero = aventurero;
+        initComponents();
+        setLocationRelativeTo(null);
+        actualizarEncabezado();
+    }
+    private void actualizarEncabezado() {
+        if (aventurero != null) {
+            jLabel1.setText(
+                aventurero.getNombre()
+                + " | Clases: " + aventurero.getCantidadClases() + "/" + Aventurero.MAX_CLASES
+                + " | Niveles disponibles: " + aventurero.getNivelesRestantes() + "/" + aventurero.getNivel()
+            );
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,7 +67,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Selecciona una clase para empezar ");
+        jLabel1.setText("Selecciona una clase ");
 
         btnGuerrero.setText("Guerrero");
         btnGuerrero.addActionListener(this::btnGuerreroActionPerformed);
@@ -127,7 +146,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
         // TODO add your handling code here:
-    VistaGuerrero ventana = new VistaGuerrero(controlador);
+    VistaGuerrero ventana = new VistaGuerrero(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -135,7 +154,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMagoActionPerformed
         // TODO add your handling code here:
-        VistaMago ventana = new VistaMago(controlador);
+    VistaMago ventana = new VistaMago(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -143,7 +162,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnClerigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClerigoActionPerformed
         // TODO add your handling code here:
-        VistaClerigo ventana = new VistaClerigo(controlador);
+    VistaClerigo ventana = new VistaClerigo(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -151,7 +170,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnMonjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMonjeActionPerformed
         // TODO add your handling code here:
-        VistaMonje ventana = new VistaMonje(controlador);
+    VistaMonje ventana = new VistaMonje(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -159,7 +178,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnPaladinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaladinActionPerformed
         // TODO add your handling code here:
-        VistaPaladin ventana = new VistaPaladin(controlador);
+    VistaPaladin ventana = new VistaPaladin(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -167,7 +186,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnExploradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExploradorActionPerformed
         // TODO add your handling code here:
-        VistaExplorador ventana = new VistaExplorador(controlador);
+    VistaExplorador ventana = new VistaExplorador(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -175,7 +194,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnPicaroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPicaroActionPerformed
         // TODO add your handling code here:
-        VistaPicaro ventana = new VistaPicaro(controlador);
+    VistaPicaro ventana = new VistaPicaro(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();
@@ -183,7 +202,7 @@ public VistaClases(Controlador.GremioControlador controlador) {
 
     private void btnBardoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBardoActionPerformed
         // TODO add your handling code here:
-        VistaBardo ventana = new VistaBardo(controlador);
+    VistaBardo ventana = new VistaBardo(controlador, aventurero);
     ventana.setLocationRelativeTo(null);
     ventana.setVisible(true);
     this.dispose();

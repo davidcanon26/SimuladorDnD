@@ -4,6 +4,7 @@
  */
 package Vista;
 
+
 /**
  *
  * @author Usuario
@@ -12,6 +13,7 @@ public class VistaGuerrero extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaGuerrero.class.getName());
     private Controlador.GremioControlador controlador;
+    private modelo.Aventurero aventurero;
     /**
      * Creates new form VistaGuerrero
      */
@@ -25,6 +27,23 @@ public VistaGuerrero(Controlador.GremioControlador controlador) {
     this.controlador = controlador;
     initComponents();
     setLocationRelativeTo(null);
+}
+
+public VistaGuerrero(Controlador.GremioControlador controlador, modelo.Aventurero aventurero) {
+    this.controlador = controlador;
+    this.aventurero = aventurero;
+    initComponents();
+    setLocationRelativeTo(null);
+    cargarDatosAventurero();
+}
+private void cargarDatosAventurero() {
+    if (aventurero != null) {
+        txtNombre.setText(aventurero.getNombre());
+        txtNombre.setEditable(false);
+        txtVida.setText(String.valueOf(aventurero.getPuntosVida()));
+        txtVida.setEditable(false);
+        jLabel2.setText("Niveles Guerrero (restantes: " + aventurero.getNivelesRestantes() + ")");
+    }
 }
 
     /**
@@ -50,13 +69,13 @@ public VistaGuerrero(Controlador.GremioControlador controlador) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Ingresa un nombre");
+        jLabel1.setText("Nombre");
 
         txtNombre.addActionListener(this::txtNombreActionPerformed);
 
-        jLabel2.setText("Ingresa tu nivel (maximo 20)");
+        jLabel2.setText("Ingrese el nivel de la clase");
 
-        jLabel3.setText("Ingresa tus puntos de vida");
+        jLabel3.setText("Puntos de vida");
 
         buttonGroup1.add(rbSi);
         rbSi.setText("Si");
@@ -76,20 +95,23 @@ public VistaGuerrero(Controlador.GremioControlador controlador) {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtNombre))
+                    .addComponent(btnHecho)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(95, 95, 95))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(58, 58, 58)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHecho)
-                            .addComponent(rbSi)
                             .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbSi)
                             .addComponent(rbNo))))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
@@ -97,26 +119,26 @@ public VistaGuerrero(Controlador.GremioControlador controlador) {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnHecho))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbSi, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rbSi))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbNo)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnHecho)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,50 +150,54 @@ public VistaGuerrero(Controlador.GremioControlador controlador) {
 
     private void btnHechoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHechoActionPerformed
         // TODO add your handling code here:
-        if (!controlador.puedeRegistrarMas()) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Ya alcanzaste el máximo de 4 aventureros.");
+        if (aventurero == null) {
+        javax.swing.JOptionPane.showMessageDialog(this, "No se encontró el aventurero seleccionado.");
         return;
     }
-
-    String nombre = txtNombre.getText().trim();
-    if (nombre.isEmpty()) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Ingresa un nombre.");
+    if (aventurero.tieneClase(modelo.Guerrero.class)) {
+        javax.swing.JOptionPane.showMessageDialog(this, aventurero.getNombre() + " ya tiene la clase Guerrero.");
         return;
     }
-
     if (!rbSi.isSelected() && !rbNo.isSelected()) {
         javax.swing.JOptionPane.showMessageDialog(this, "Selecciona si usa armadura pesada.");
         return;
     }
 
     try {
-        int nivel = Integer.parseInt(txtNivel.getText().trim());
-        int vida = Integer.parseInt(txtVida.getText().trim());
+        int nivelesClase = Integer.parseInt(txtNivel.getText().trim());
+        int maxRestante = aventurero.getNivelesRestantes();
 
-        if (nivel < 1 || nivel > 20) {
-            javax.swing.JOptionPane.showMessageDialog(this, "El nivel debe estar entre 1 y 20.");
-            return;
-        }
-        if (vida <= 0) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Los puntos de vida deben ser mayores a 0.");
+        if (maxRestante <= 0 || nivelesClase < 1 || nivelesClase > maxRestante) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Debes asignar entre 1 y " + maxRestante + " niveles (nivel total del aventurero: " + aventurero.getNivel() + ")."
+            );
             return;
         }
 
         boolean usaArmaduraPesada = rbSi.isSelected();
-        modelo.Guerrero guerrero = new modelo.Guerrero(nombre, nivel, vida, usaArmaduraPesada);
+        modelo.Guerrero guerrero = new modelo.Guerrero(
+            aventurero.getNombre(),
+            nivelesClase,
+            aventurero.getPuntosVida(),
+            usaArmaduraPesada
+        );
 
-        if (controlador.registrarAventurero(guerrero)) {
+        if (controlador.asignarClaseAAventurero(aventurero, guerrero, nivelesClase)) {
             javax.swing.JOptionPane.showMessageDialog(
                 this,
-                "Guerrero registrado (" + controlador.getCantidadAventureros() + "/4)."
+                "Guerrero asignado (" + aventurero.getCantidadClases() + "/" + modelo.Aventurero.MAX_CLASES
+                + ") | Niveles restantes: " + aventurero.getNivelesRestantes()
             );
             VistaDnD menu = new VistaDnD(controlador);
             menu.setLocationRelativeTo(null);
             menu.setVisible(true);
             this.dispose();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "No se pudo asignar la clase (revisa límite de 4 clases o niveles).");
         }
     } catch (NumberFormatException ex) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Nivel y vida deben ser números enteros.");
+        javax.swing.JOptionPane.showMessageDialog(this, "El nivel debe ser un número entero.");
     }
     }//GEN-LAST:event_btnHechoActionPerformed
 

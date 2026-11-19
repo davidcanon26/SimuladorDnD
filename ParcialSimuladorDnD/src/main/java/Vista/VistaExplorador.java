@@ -12,20 +12,39 @@ public class VistaExplorador extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaExplorador.class.getName());
     private Controlador.GremioControlador controlador;
+    private modelo.Aventurero aventurero;
     /**
      * Creates new form VistaGuerrero
      */
     public VistaExplorador() {
-    this.controlador = new Controlador.GremioControlador();
-    initComponents();
-    setLocationRelativeTo(null);
-}
+        this.controlador = new Controlador.GremioControlador();
+        initComponents();
+        setLocationRelativeTo(null);
+    }
 
-public VistaExplorador(Controlador.GremioControlador controlador) {
-    this.controlador = controlador;
-    initComponents();
-    setLocationRelativeTo(null);
-}
+    public VistaExplorador(Controlador.GremioControlador controlador) {
+        this.controlador = controlador;
+        initComponents();
+        setLocationRelativeTo(null);
+    }
+
+    public VistaExplorador(Controlador.GremioControlador controlador, modelo.Aventurero aventurero) {
+        this.controlador = controlador;
+        this.aventurero = aventurero;
+        initComponents();
+        setLocationRelativeTo(null);
+        cargarDatosAventurero();
+    }
+
+    private void cargarDatosAventurero() {
+        if (aventurero != null) {
+            txtNombre.setText(aventurero.getNombre());
+            txtNombre.setEditable(false);
+            txtVida.setText(String.valueOf(aventurero.getPuntosVida()));
+            txtVida.setEditable(false);
+            jLabel2.setText("Niveles Explorador (restantes: " + aventurero.getNivelesRestantes() + ")");
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,13 +68,13 @@ public VistaExplorador(Controlador.GremioControlador controlador) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Ingresa un nombre");
+        jLabel1.setText("Nombre");
 
         txtNombre.addActionListener(this::txtNombreActionPerformed);
 
-        jLabel2.setText("Ingresa tu nivel (maximo 20)");
+        jLabel2.setText("Ingrese el nivel de la clase");
 
-        jLabel3.setText("Ingresa tus puntos de vida");
+        jLabel3.setText("Puntos de vida");
 
         jLabel4.setText("Ingresa terreno favorecido");
 
@@ -69,44 +88,41 @@ public VistaExplorador(Controlador.GremioControlador controlador) {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHecho)
                     .addComponent(jLabel2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtNombre))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(71, 71, 71)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHecho)
-                            .addComponent(jLabel4)
-                            .addComponent(txtTerrenoFavorecido, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(68, Short.MAX_VALUE))
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(txtTerrenoFavorecido, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnHecho))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTerrenoFavorecido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(btnHecho)
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,47 +134,56 @@ public VistaExplorador(Controlador.GremioControlador controlador) {
 
     private void btnHechoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHechoActionPerformed
         // TODO add your handling code here:
-        if (!controlador.puedeRegistrarMas()) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Ya alcanzaste el máximo de 4 aventureros.");
-        return;
-    }
-
-    String nombre = txtNombre.getText().trim();
-    String terrenoFavorecido = txtTerrenoFavorecido.getText().trim();
-
-    if (nombre.isEmpty() || terrenoFavorecido.isEmpty()) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Completa el nombre y el terreno favorecido.");
-        return;
-    }
-
-    try {
-        int nivel = Integer.parseInt(txtNivel.getText().trim());
-        int vida = Integer.parseInt(txtVida.getText().trim());
-
-        if (nivel < 1 || nivel > 20) {
-            javax.swing.JOptionPane.showMessageDialog(this, "El nivel debe estar entre 1 y 20.");
+        if (aventurero == null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "No se encontró el aventurero seleccionado.");
             return;
         }
-        if (vida <= 0) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Los puntos de vida deben ser mayores a 0.");
+        if (aventurero.tieneClase(modelo.Explorador.class)) {
+            javax.swing.JOptionPane.showMessageDialog(this, aventurero.getNombre() + " ya tiene la clase Explorador.");
             return;
         }
 
-        modelo.Explorador explorador = new modelo.Explorador(nombre, nivel, vida, terrenoFavorecido);
+        String terrenoFavorecido = txtTerrenoFavorecido.getText().trim();
+        if (terrenoFavorecido.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Ingresa el terreno favorecido.");
+            return;
+        }
 
-        if (controlador.registrarAventurero(explorador)) {
-            javax.swing.JOptionPane.showMessageDialog(
-                this,
-                "Explorador registrado (" + controlador.getCantidadAventureros() + "/4)."
+        try {
+            int nivelesClase = Integer.parseInt(txtNivel.getText().trim());
+            int maxRestante = aventurero.getNivelesRestantes();
+
+            if (maxRestante <= 0 || nivelesClase < 1 || nivelesClase > maxRestante) {
+                javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Debes asignar entre 1 y " + maxRestante + " niveles (nivel total del aventurero: " + aventurero.getNivel() + ")."
+                );
+                return;
+            }
+
+            modelo.Explorador explorador = new modelo.Explorador(
+                aventurero.getNombre(),
+                nivelesClase,
+                aventurero.getPuntosVida(),
+                terrenoFavorecido
             );
-            VistaDnD menu = new VistaDnD(controlador);
-            menu.setLocationRelativeTo(null);
-            menu.setVisible(true);
-            this.dispose();
+
+            if (controlador.asignarClaseAAventurero(aventurero, explorador, nivelesClase)) {
+                javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Explorador asignado (" + aventurero.getCantidadClases() + "/" + modelo.Aventurero.MAX_CLASES
+                    + ") | Niveles restantes: " + aventurero.getNivelesRestantes()
+                );
+                VistaDnD menu = new VistaDnD(controlador);
+                menu.setLocationRelativeTo(null);
+                menu.setVisible(true);
+                this.dispose();
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "No se pudo asignar la clase.");
+            }
+        } catch (NumberFormatException ex) {
+            javax.swing.JOptionPane.showMessageDialog(this, "El nivel debe ser un número entero.");
         }
-    } catch (NumberFormatException ex) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Nivel y vida deben ser números enteros.");
-    }
     }//GEN-LAST:event_btnHechoActionPerformed
 
     /**
