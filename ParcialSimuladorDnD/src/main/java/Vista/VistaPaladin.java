@@ -65,6 +65,7 @@ public class VistaPaladin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtPuntosFuerza = new javax.swing.JTextField();
         btnHecho = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +82,9 @@ public class VistaPaladin extends javax.swing.JFrame {
         btnHecho.setText("Hecho");
         btnHecho.addActionListener(this::btnHechoActionPerformed);
 
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(this::btnVolverActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,6 +92,7 @@ public class VistaPaladin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVolver)
                     .addComponent(btnHecho)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +129,9 @@ public class VistaPaladin extends javax.swing.JFrame {
                     .addComponent(txtPuntosFuerza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(btnHecho)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnVolver)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,6 +194,14 @@ public class VistaPaladin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnHechoActionPerformed
 
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+        VistaClases vistaClases = new VistaClases(controlador, aventurero);
+    vistaClases.setLocationRelativeTo(null);
+    vistaClases.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -214,6 +229,7 @@ public class VistaPaladin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHecho;
+    private javax.swing.JButton btnVolver;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
